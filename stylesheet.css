@@ -1,39 +1,31 @@
+/* Inspiration for the stylesheet taken from https://codepen.io/nsieber/pen/vOVQgg */
 body {
-    /* Typography Declarations */
-    color: #222222;
-    font-size: 1em;
-    font-family: "Open Sans", "Helvetica Neue", sans-serif;
-	background-color: #878582;
-}
-
-.content-footer,
-.header-name,
-.header-intro {
-  text-align: center;
+	/* Generic font declaration that I liked from https://www.w3schools.com/cssref/css_websafe_fonts.asp */
+    font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
+	background-color: #73A8C2;
 }
 
 .header {
   padding: 1em 0;
-  background-image: url('vultures.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url('images/vultures.jpg');
+  background-size: 1920px 562px;
   border-top: solid 1em #157f2e;
+  /* Makes the background image display its centre even if screen size cannot display the edges of it */
+  background-position: center top;
 }
 
+
+
 .header-intro {
-    /* Layout Declarations */
     margin-bottom: 1.1em;
-    /* Typography Declarations */
-    font-family: "Gentium Book Basic", Georgia, serif;
     font-size: 2em;
 }
 
 .header-name {
-    /* Layout Declarations */
     color: #157f2e;
     margin-top: -0.2em;
 	margin-bottom: 2em;
-    /* Typography Declarations */
+	/* Different typography for the header because I liked the way it was done in the codepen page linked at top. */
     font-family: "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: bold;
     font-size: 6em;
@@ -41,24 +33,21 @@ body {
     text-transform: uppercase;
 }
 
+.sidebar {
+	float: right;
+	margin-left: 5em;
+	margin-top: 2em;
+	margin-right: 10em;
+}
+
 .section-container {
-	background-color: #f7f5f2;
-	width: 50em;
+	background-color: #FFFCFC;
+	width: 100em;
 	border: 0.5em solid #3b3935;
-	padding: 2em;
+	padding: 1em;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 0.5em;
-}
-
-.introduction-section,
-.location-section,
-.questions-section
-.education-section {
-    max-width: 38em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
 }
 
 .introduction-section > p,
@@ -66,21 +55,18 @@ body {
 .questions-section,
 .content-footer > p
 .education-section > p {
-    /* Typography Declarations */
     font-weight: 300;
     letter-spacing: 0.05em;
 }
 
 .questions-section > h2 {
-    font-family: "Gentium Book Basic", Georgia, serif;
     font-size: 1.2em;
     font-weight: bold;
-    /* Layout */
-    margin: 2em 0 1em 0;
+    margin: 1em 0 1em 0;
 }
 
 section > h1 {
-    margin-top: 2em;
+    margin-top: 1em;
 }
 
 .content-footer,
@@ -92,23 +78,16 @@ section > h1 {
 .introduction > p,
 .location > p,
 .content-footer > p {
-    /* Typography Declarations */
     font-weight: 300;
     letter-spacing: 0.05em;
-}
-h2 {
-    /* Typography Declarations */
-    font-family: "Gentium Book Basic", Georgia, serif;
-    font-size: 1.2em;
-    font-weight: bold;
 }
 
 .introduction-section,
 .location-section,
 .questions-section,
 .education-section {
-    max-width: 45em;
-    margin-left: auto;
+    max-width: 40em;
+    margin-left: 10em;
     margin-right: auto;
     margin-top: 2em;
 }
@@ -116,12 +95,12 @@ h2 {
   margin: 2em 0;
   padding: 1.5em 0;
   text-align: center;
-  background-color: #73A8C2;
+  background-color: #878582;
   text-decoration: none;
 }
 .social > li {
   display: inline;
-  margin: 4px;
+  margin: 5px;
 }
 .content-footer > p {
   color: #F7EDE1;
@@ -131,4 +110,83 @@ a {
     text-decoration: none;
     color: #F1C863;
 }
-  
+
+
+
+/* Adapted from https://www.w3schools.com/css/css_image_gallery.asp */
+
+.header-gallery {
+  padding: 2em 0;
+  background-color: #FFFCFC;
+  border-top: solid 1em #157f2e;
+  margin-bottom: 2em;
+}
+
+.header-name-gallery {
+    color: #157f2e;
+    margin-top: 0.1em;
+	margin-bottom: 0.1em;
+	/* Different typography for the header because I liked the way it was done in the codepen page linked at top. */
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+	text-align: center;
+}
+
+/* These settings put a border around each image and highlight the border when the image is hovered */
+div.gallery {
+  border: 2px solid #000000;
+}
+div.gallery:hover {
+  border: 2px solid #FFFFFF;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  background-color: #FFFCFC;
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Default setting telling the the browser to display each image at 33% page width for default monitors */
+.responsive {
+  padding: 4px 4px;
+  float: left;
+  width: 33.33333%;
+}
+/* media queries from w3schools that tell the browser to display in rows of 2 or 1 image for lower width screens/windows (a different version of the .responsive class takes over) */
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 1px 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+/* Clears the  */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.catpic {
+	float: left;
+	margin-left: 3em;
+}
+.dogpic {
+	float: right;
+	margin-right: 3em;
+}
