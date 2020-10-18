@@ -11,12 +11,13 @@
 	<meta charset="UTF-8">
 </head>
 <body>
+<!-- Page header, with title and 2 floating pngs as a visual element -->
 <header class='header-gallery'>
-  <!-- cat icon PNG Designed By Alien3287 from https://pngtree.com/freepng/cute-ginger-cat-head_5304599.html -->
-  <img class='catpic' src="images/Cat%2Epng" alt="Cute Cat Face" width="150" height="150">
-  <!-- dog icon PNG retrieved from https://toppng.com/cute-cartoon-dog-face-PNG-free-PNG-Images_87567 -->
-  <img class='dogpic' src="images/Dog%2Epng" alt="Cute Dog Face" width="150" height="150">
-  <h1 class='header-name-gallery'>Pet Photo Gallery</h1>
+	<!-- cat icon PNG Designed By Alien3287 from https://pngtree.com/freepng/cute-ginger-cat-head_5304599.html -->
+	<img class='catpic' src="images/Cat%2Epng" alt="Cute Cat Face" width="150" height="150">
+	<!-- dog icon PNG retrieved from https://toppng.com/cute-cartoon-dog-face-PNG-free-PNG-Images_87567 -->
+	<img class='dogpic' src="images/Dog%2Epng" alt="Cute Dog Face" width="150" height="150">
+	<h1 class='header-name-gallery'>Pet Photo Gallery</h1>
 </header>
 
 <!-- All images that follow are my own (Apologies for camera quality, the flash is wonky.) -->
@@ -25,65 +26,75 @@
 <!-- ********************************************************************************************** -->
 <!-- For submission: 6 of my own unique images, linked using relative paths and hosted in my GitHub -->
 <!-- ********************************************************************************************** -->
+
+<!-- All 6 gallery images follow the same format, so I'll just comment this one -->
+<!-- This div makes the gallery images responsive so they will display only 2 or 1 image per row on lower resolution screens (see CSS) -->
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/Mowgli%2Ejpg">
-	  <img src="images/MowgliThumb%2Ejpg" alt="Mowgli the Dog" width="640" height="480">
-    </a>
-    <div class="desc">This is Mowgli, our Australian Shepherd. He grew up on a farm surrounded by cats, and we suspect he thinks he is a cat given some of his eccentricities. Doesn't like strangers, but really he's a big sweetheart.</div>
-  </div>
+	<!-- This div styles its contents (image and description) as the gallery class (see CSS), which displays its image across 100% of its width and has a border -->
+	<div class="gallery">
+		<!-- This is the link for the full version of each image, with target = blank making the link open in a new tab if clicked -->
+		<a target="_blank" href="images/Mowgli%2Ejpg">
+			<!-- This img tag produces the thumbnail image that the user sees on their screen -->
+			<img src="images/MowgliThumb%2Ejpg" alt="Mowgli the Dog" width="640" height="480">
+		</a>
+		<!-- Description, which is shown beneath each picture -->
+		<div class="desc">This is Mowgli, our Australian Shepherd. He grew up on a farm surrounded by cats, and we suspect he thinks he is a cat given some of his eccentricities. Doesn't like strangers, but really he's a big sweetheart.</div>
+	</div>
 </div>
 
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/Misha%2Ejpg">
-      <img src="images/MishaThumb%2Ejpg" alt="Misha the Cat" width="640" height="480">
-    </a>
-    <div class="desc">This is Misha, our oldest cat and a representative of the previous cat administration. She's getting a bit chubby in her later years, but she still enjoys roaming around the property and trying to hunt.</div>
-  </div>
+	<div class="gallery">
+		<a target="_blank" href="images/Misha%2Ejpg">
+			<img src="images/MishaThumb%2Ejpg" alt="Misha the Cat" width="640" height="480">
+		</a>
+		<div class="desc">This is Misha, our oldest cat and a representative of the previous cat administration. She's getting a bit chubby in her later years, but she still enjoys roaming around the property and trying to hunt.</div>
+	</div>
 </div>
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/Heera%2Ejpg">
-      <img src="images/HeeraThumb%2Ejpg" alt="Heera the Cat" width="640" height="480">
-    </a>
-    <div class="desc">This is Heera, a pure Maine Coon and mother to our other 3 cats. We got her from a family in North York who were rehoming their cat, and didn't know that she was pregnant. Great value cat!</div>
-  </div>
+	<div class="gallery">
+		<a target="_blank" href="images/Heera%2Ejpg">
+			<img src="images/HeeraThumb%2Ejpg" alt="Heera the Cat" width="640" height="480">
+		</a>
+		<div class="desc">This is Heera, a pure Maine Coon and mother to our other 3 cats. We got her from a family in North York who were rehoming their cat, and didn't know that she was pregnant. Great value cat!</div>
+	</div>
 </div>
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/Boots%2Ejpg">
-      <img src="images/BootsThumb%2Ejpg" alt="Boots the Cat" width="640" height="480">
-    </a>
-    <div class="desc">This is Boots, who like his siblings is a Maine Coon / Persian mix and around 2 years old. He's a big, strong boy, up to 18 pounds at his heaviest, with a dainty and rarely-used meow that we find endearing.</div>
-  </div>
+	<div class="gallery">
+		<a target="_blank" href="images/Boots%2Ejpg">
+			<img src="images/BootsThumb%2Ejpg" alt="Boots the Cat" width="640" height="480">
+		</a>
+		<div class="desc">This is Boots, who like his siblings is a Maine Coon / Persian mix and around 2 years old. He's a big, strong boy, up to 18 pounds at his heaviest, with a dainty and rarely-used meow that we find endearing.</div>
+	</div>
 </div>
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/Walter%2Ejpg">
-      <img src="images/WalterThumb%2Ejpg" alt="Walter the Cat" width="640" height="480">
-    </a>
-    <div class="desc">This is Walter, who inherited an all-white coat and blue eyes, presumably from his father. Apparently white cats with blue eyes are typically deaf, but Walter can hear just fine. Loves a good cuddle.</div>
-  </div>
+	<div class="gallery">
+		<a target="_blank" href="images/Walter%2Ejpg">
+			<img src="images/WalterThumb%2Ejpg" alt="Walter the Cat" width="640" height="480">
+		</a>
+		<div class="desc">This is Walter, who inherited an all-white coat and blue eyes, presumably from his father. Apparently white cats with blue eyes are typically deaf, but Walter can hear just fine. Loves a good cuddle.</div>
+	</div>
 </div>
 
 <div class="responsive">
-  <div class="gallery">
-    <a target="_blank" href="images/Roxie%2Ejpg">
-      <img src="images/RoxieThumb%2Ejpg" alt="Roxie the Cat" width="640" height="480">
-    </a>
-    <div class="desc">This is Roxie, who was the adorable runt of her litter. She's much smaller than her brothers and mother, with shorter legs and body but plenty of fluff. Very independent, but also sweet and playful.</div>
-  </div>
+	<div class="gallery">
+		<a target="_blank" href="images/Roxie%2Ejpg">
+			<img src="images/RoxieThumb%2Ejpg" alt="Roxie the Cat" width="640" height="480">
+		</a>
+		<div class="desc">This is Roxie, who was the adorable runt of her litter. She's much smaller than her brothers and mother, with shorter legs and body but plenty of fluff. Very independent, but also sweet and playful.</div>
+	</div>
 </div>
 
+<!-- The clearfix div here acts as an invisible block element that cannot have any images floating on either side of it -->
+<!-- This prevents the gallery above from having a poor visual overlap with the footer (or any other content) below -->
 <div class="clearfix"></div>
 
+<!-- Footer as on main page, but this time just includes a link back to the main page -->
 <footer class="content-footer">
-    <p><a href="index%2Ehtml">Click here</a> to return to the main page</p>  
+	<p><a href="index%2Ehtml">Click here</a> to return to the main page</p>  
 </footer>
 
 </body>
