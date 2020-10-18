@@ -1,45 +1,62 @@
-/* Inspiration for the stylesheet taken from https://codepen.io/nsieber/pen/vOVQgg */
+/* Inspiration for the stylesheet and sectioning of headings/paragraphs taken from https://codepen.io/nsieber/pen/vOVQgg */
+/* Major resource for all CSS properties was w3schools */
+
+/* Body settings which apply to the background and fot of the body of both pages; background colour especially noticeable as same on both pages */
 body {
 	/* Generic font declaration that I liked from https://www.w3schools.com/cssref/css_websafe_fonts.asp */
     font-family: "Book Antiqua", "Palatino Linotype", Palatino, serif;
 	background-color: #73A8C2;
 }
 
-.header {
-  padding: 1em 0;
-  background-image: url('images/vultures.jpg');
-  background-size: 1920px 562px;
-  border-top: solid 1em #157f2e;
-  /* Makes the background image display its centre even if screen size cannot display the edges of it */
-  background-position: center top;
+/* Sets all elements on both pages to include their border & padding in their set height & width */
+/* Without this, less intuitive formatting for each element would be required, especially in the gallery page. */
+* {
+	box-sizing: border-box;
 }
 
+/* Formatting for the header block on the main page, including relative path linked background image and borders */
+.header {
+	padding: 1em;
+	background-image: url('images/vultures%2Ejpg');
+	border-top: solid 1.2em #157f2e;
+	/* Sets background image not to repeat so there's no weird edge images on a monitor over 1080p */
+	background-repeat: no-repeat;
+	/* Makes the background image display its centre even if screen size cannot display the edges of it */
+	/* This way the vultures are always centred even on a low res screen or non-maximised browser window */
+	background-position: center top;
+}
 
-
+/* Positional formatting for the introductory text of the header */
 .header-intro {
     margin-bottom: 1.1em;
     font-size: 2em;
 }
 
+/* Positional and typographic formatting for the main title (name) */
 .header-name {
     color: #157f2e;
-    margin-top: -0.2em;
-	margin-bottom: 2em;
+	/* Sets the main heading to be extra close to the intro text */
+    margin-top: -0.3em;
+	margin-bottom: 2.1em;
 	/* Different typography for the header because I liked the way it was done in the codepen page linked at top. */
     font-family: "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: bold;
     font-size: 6em;
-    letter-spacing: -0.02em;
+	/* Spacing change to make the main title fit a bit better around the tree in the background image */
+    letter-spacing: -0.01em;
+	/* Could instead just make the header name uppercase in the html */
     text-transform: uppercase;
 }
 
-.sidebar {
+/* Positional settings for the map images */
+.map {
 	float: right;
 	margin-left: 5em;
-	margin-top: 2em;
+	margin-top: 3em;
 	margin-right: 10em;
 }
 
+/* Settings for the white-ish box that contains the body of the page */
 .section-container {
 	background-color: #FFFCFC;
 	width: 100em;
@@ -50,38 +67,37 @@ body {
 	margin-top: 0.5em;
 }
 
+/* Sets letter spacing for all the body section paragraph tags to a value that is uniform while also minimizing 1-word trailing lines */
 .introduction-section > p,
 .location-section > p,
-.questions-section,
-.content-footer > p
+.questions-section > p,
+.content-footer > p,
 .education-section > p {
-    font-weight: 300;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
 }
 
-.questions-section > h2 {
+/* Sets the subheadings in the questions section to be slightly larger than the body font, and slightly tabbed out from rest of text in this section */
+.questions-section > h3 {
     font-size: 1.2em;
-    font-weight: bold;
-    margin: 1em 0 1em 0;
+    margin: 1em
 }
 
-section > h1 {
-    margin-top: 1em;
-}
-
+/* Centres the text for all the appropriate elements on both pages that should be centred (Major headers and footers, descriptions in the gallery)*/
 .content-footer,
 .header-name,
-.header-intro {
-  text-align: center;
+.header-intro,
+.header-name-gallery,
+.desc {
+	text-align: center;
 }
 
-.introduction > p,
-.location > p,
+/* Tightens up the explanatory text in the content footer for both pages */
 .content-footer > p {
-    font-weight: 300;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.01em;
+	color: #F7EDE1;
 }
 
+/* Position settings for each section of the body text on the main page, sets these text blocks to all leave as much space to the left as the maps leave to the right */
 .introduction-section,
 .location-section,
 .questions-section,
@@ -91,20 +107,26 @@ section > h1 {
     margin-right: auto;
     margin-top: 2em;
 }
+
+/* Sets the footer on both pages to have a top margin but no bottom or left/right margin, so it sticks close to the edges at any page width  */
+/* Also sets footer background colour and width of the element */
 .content-footer {
-  margin: 2em 0;
-  padding: 1.5em 0;
-  text-align: center;
-  background-color: #878582;
-  text-decoration: none;
+	margin: 2em 0 0 0;
+	padding: 1.5em;
+	background-color: #878582;
 }
-.social > li {
-  display: inline;
-  margin: 5px;
+
+/* Sets the social links to have non-standard spacing for display purposes */
+.social {
+	word-spacing: 1em;
 }
-.content-footer > p {
-  color: #F7EDE1;
+/* Prevents the space in 'Fleming Email' from also using the non-standard spacing */
+.social-undo {
+	word-spacing: normal;
 }
+
+/* Link text style */
+/* Makes links bold, stops them from being underlined, and sets the colour to a non-default in both pages */
 a {
     font-weight: bold;
     text-decoration: none;
@@ -115,13 +137,15 @@ a {
 
 /* Adapted from https://www.w3schools.com/css/css_image_gallery.asp */
 
+/* Gallery header settings, as on the main page */
 .header-gallery {
-  padding: 2em 0;
-  background-color: #FFFCFC;
-  border-top: solid 1em #157f2e;
-  margin-bottom: 2em;
+	padding: 2em 0;
+	background-color: #FFFCFC;
+	border-top: solid 1.2em #157f2e;
+	margin-bottom: 2em;
 }
 
+/* Settings for the title of the gallery, also as on main page */
 .header-name-gallery {
     color: #157f2e;
     margin-top: 0.1em;
@@ -130,58 +154,60 @@ a {
     font-family: "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: bold;
     font-size: 6em;
-    letter-spacing: -0.02em;
+	/* Again, not totally necessary to force uppercase here, could just make it uppercase in the html */
     text-transform: uppercase;
-	text-align: center;
 }
 
-/* These settings put a border around each image and highlight the border when the image is hovered */
-div.gallery {
-  border: 2px solid #000000;
+/* These settings put a black border around each image and highlight the border white when the image is hovered */
+.gallery {
+	border: 2px solid #000000;
 }
-div.gallery:hover {
-  border: 2px solid #FFFFFF;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
+.gallery:hover {
+	border: 2px solid #FFFFFF;
 }
 
-div.desc {
-  padding: 15px;
-  text-align: center;
-  background-color: #FFFCFC;
+/* Sets gallery images to take up 100% of the width of each gallery box */
+/* Since width is a percentage rather than a px value, the images will resize on the page for lower resolution displays. */
+.gallery img {
+	width: 100%;
+	height: auto;
 }
 
-* {
-  box-sizing: border-box;
+/* Styling for the description of each image */
+.desc {
+	padding: 12px;
+	background-color: #FFFCFC;
 }
+
 /* Default setting telling the the browser to display each image at 33% page width for default monitors */
 .responsive {
-  padding: 4px 4px;
-  float: left;
-  width: 33.33333%;
-}
-/* media queries from w3schools that tell the browser to display in rows of 2 or 1 image for lower width screens/windows (a different version of the .responsive class takes over) */
-@media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 1px 0;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
-}
-/* Clears the  */
-.clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+	padding: 4px 4px;
+	float: left;
+	width: 33.33333%;
 }
 
+/* media queries from w3schools that tell the browser to display in rows of 2 or 1 image for lower width screens/windows (a different version of the .responsive class takes over) */
+@media only screen and (max-width: 700px) {
+	.responsive {
+		width: 49.99999%;
+		margin: 1px 0;
+	}
+}
+@media only screen and (max-width: 500px) {
+	.responsive {
+		width: 100%;
+	}
+}
+
+/* Class attached to a div that separates the gallery from any further elements in this page by placing an invisible separator at the div*/
+.clearfix {
+	/* Must set the div to behave as an element that would have its own line, such as block or table */
+	display: block;
+	/* Sets the div to prevent any floating elements (i.e. the images from the gallery) from floating on either side of it; they are then unable to float past this point to the footer */
+	clear: both;
+}
+
+/* Placement information for the cat and dog faces in the header */
 .catpic {
 	float: left;
 	margin-left: 3em;
